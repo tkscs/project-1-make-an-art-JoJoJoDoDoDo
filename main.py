@@ -25,6 +25,12 @@ def draw_leaf():
             turtle.right(3)
         turtle.right(120)
         for i in range(20): # second leaf
+
+        for i in range(20): # first petal
+            turtle.forward(size / 3)
+            turtle.right(3)
+        turtle.right(120)
+        for i in range(20): # second petal
             turtle.forward(size / 3)
             turtle.right(3)
         turtle.right(120)
