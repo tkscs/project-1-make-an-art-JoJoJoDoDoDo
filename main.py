@@ -1,23 +1,20 @@
 import turtle
 
-turtle.speed(0)
+turtle.tracer(0, 0)
 
-size = 15 # controls the size of the structure. All values
-count = 10 # controls the count of the flower petals. All values
+size = 10 # controls the size of the structure. All values
+count = 5 # controls the count of the flower petals. All values
 
 
 
 
 
 def draw_petal():
-    for i in range(20): # first petal
-        turtle.forward(size / 2)
-        turtle.right(3)
-    turtle.right(120)
-    for i in range(20): # second petal
-        turtle.forward(size / 2)
-        turtle.right(3)
-    turtle.right(120)
+    for _ in range(2):
+        for i in range(20):
+            turtle.forward(size / 2)
+            turtle.right(3)
+        turtle.right(120)
 
 def draw_leaf():
         for i in range(20): # first petal
@@ -50,7 +47,7 @@ def draw_stem():
         draw_leaf()
     turtle.setheading(270)
     turtle.forward(200)
-    turtle.color("purple") #controls the color of the petals
+    turtle.color("cyan") #controls the color of the petals
     turtle.pensize(3) # controls the thickness and width of each of the petals
     turtle.penup()
     turtle.setposition(0,100)
@@ -69,4 +66,5 @@ for i in range(count): # draws the petals based of the count
 #draw_stem()
 
 turtle.hideturtle()
+turtle.update()
 turtle.exitonclick()
